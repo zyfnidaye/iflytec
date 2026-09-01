@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "category": "功能介绍",
+    "question": "虚拟人是做什么的？",
+    "expected_answer_keywords": ["虚拟形象", "实时驱动", "云端渲染"]
+  },
+  {
+    "id": 2,
+    "category": "功能介绍",
+    "question": "星火大模型支持哪些能力？",
+    "expected_answer_keywords": ["对话", "生成", "理解"]
+  },
+  {
+    "id": 3,
+    "category": "功能介绍",
+    "question": "虚拟人支持哪些驱动方式？",
+    "expected_answer_keywords": ["文本驱动", "音频驱动", "命令驱动"]
+  },
+  {
+    "id": 4,
+    "category": "功能介绍",
+    "question": "XRTC 是什么协议？",
+    "expected_answer_keywords": ["实时流媒体", "直播", "低延迟"]
+  },
+  {
+    "id": 5,
+    "category": "功能介绍",
+    "question": "虚拟人的推流协议有哪些？",
+    "expected_answer_keywords": ["XRTC", "RTMP", "local"]
+  },
+  {
+    "id": 6,
+    "category": "功能介绍",
+    "question": "虚拟人支持哪些应用场景？",
+    "expected_answer_keywords": ["直播", "客服", "教育", "营销"]
+  },
+  {
+    "id": 7,
+    "category": "功能介绍",
+    "question": "星火 API 的接入方式是什么？",
+    "expected_answer_keywords": ["WebSocket", "HTTP", "SDK"]
+  },
+  {
+    "id": 8,
+    "category": "功能介绍",
+    "question": "虚拟人的动作引擎有什么作用？",
+    "expected_answer_keywords": ["生成动作", "自然", "流畅"]
+  },
+  {
+    "id": 9,
+    "category": "功能介绍",
+    "question": "文本驱动和音频驱动有什么区别？",
+    "expected_answer_keywords": ["文本", "音频", "合成", "驱动"]
+  },
+  {
+    "id": 10,
+    "category": "功能介绍",
+    "question": "虚拟人支持配置字幕吗？",
+    "expected_answer_keywords": ["支持", "字幕", "配置"]
+  },
+  {
+    "id": 11,
+    "category": "使用方法",
+    "question": "虚拟人 start 接口怎么调用？",
+    "expected_answer_keywords": ["start", "WebSocket", "app_id", "avatar_id"]
+  },
+  {
+    "id": 12,
+    "category": "使用方法",
+    "question": "start 接口的必填参数有哪些？",
+    "expected_answer_keywords": ["app_id", "avatar_id", "protocol"]
+  },
+  {
+    "id": 13,
+    "category": "使用方法",
+    "question": "如何配置虚拟人的 TTS 发音人？",
+    "expected_answer_keywords": ["vcn", "tts", "发音人"]
+  },
+  {
+    "id": 14,
+    "category": "使用方法",
+    "question": "text_driver 接口怎么调用？",
+    "expected_answer_keywords": ["text_driver", "text", "payload"]
+  },
+  {
+    "id": 15,
+    "category": "使用方法",
+    "question": "audio_driver 接口需要传什么参数？",
+    "expected_answer_keywords": ["audio", "encoding", "status", "seq"]
+  },
+  {
+    "id": 16,
+    "category": "使用方法",
+    "question": "如何配置虚拟人的背景图片？",
+    "expected_answer_keywords": ["background_image", "payload", "url"]
+  },
+  {
+    "id": 17,
+    "category": "使用方法",
+    "question": "虚拟人的保活接口怎么用？",
+    "expected_answer_keywords": ["ping", "5-10秒", "保活"]
+  },
+  {
+    "id": 18,
+    "category": "使用方法",
+    "question": "如何停止虚拟人会话？",
+    "expected_answer_keywords": ["stop", "ctrl"]
+  },
+  {
+    "id": 19,
+    "category": "使用方法",
+    "question": "reset 接口的作用是什么？",
+    "expected_answer_keywords": ["reset", "中止", "静默"]
+  },
+  {
+    "id": 20,
+    "category": "使用方法",
+    "question": "如何配置虚拟人的视频分辨率？",
+    "expected_answer_keywords": ["width", "height", "分辨率"]
+  },
+  {
+    "id": 21,
+    "category": "问题排障",
+    "question": "错误码 10301 是什么意思？",
+    "expected_answer_keywords": ["10301", "链路超时", "结束帧"]
+  },
+  {
+    "id": 22,
+    "category": "问题排障",
+    "question": "错误码 11200 怎么处理？",
+    "expected_answer_keywords": ["11200", "计量授权", "额度"]
+  },
+  {
+    "id": 23,
+    "category": "问题排障",
+    "question": "错误码 10106 是什么原因？",
+    "expected_answer_keywords": ["10106", "业务参数", "不合法"]
+  },
+  {
+    "id": 24,
+    "category": "问题排障",
+    "question": "调用虚拟人接口返回 10404 怎么办？",
+    "expected_answer_keywords": ["10404", "路由", "参数", "域名"]
+  },
+  {
+    "id": 25,
+    "category": "问题排障",
+    "question": "错误码 10110 如何解决？",
+    "expected_answer_keywords": ["10110", "授权池", "资源不足"]
+  },
+  {
+    "id": 26,
+    "category": "问题排障",
+    "question": "虚拟人 WebSocket 连接断开怎么办？",
+    "expected_answer_keywords": ["重连", "保活", "ping"]
+  },
+  {
+    "id": 27,
+    "category": "问题排障",
+    "question": "audio_driver 的 status 参数应该怎么传？",
+    "expected_answer_keywords": ["status", "0", "1", "2", "顺序"]
+  },
+  {
+    "id": 28,
+    "category": "问题排障",
+    "question": "虚拟人推流失败可能是什么原因？",
+    "expected_answer_keywords": ["推流", "配置", "protocol", "room_id"]
+  },
+  {
+    "id": 29,
+    "category": "问题排障",
+    "question": "错误码 11204 代表什么？",
+    "expected_answer_keywords": ["11204", "组鉴权", "超过限制"]
+  },
+  {
+    "id": 30,
+    "category": "问题排障",
+    "question": "如何排查虚拟人动作不流畅的问题？",
+    "expected_answer_keywords": ["动作", "引擎", "网络", "配置"]
+  }
+]

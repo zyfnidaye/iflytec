@@ -1,0 +1,527 @@
+[
+  {
+    "id": 1,
+    "category": "功能介绍",
+    "question": "虚拟人是做什么的？",
+    "answer": "我先检索知识库，看看有没有关于\"虚拟人\"的相关文档。检索到了虚拟人的相关文档，但主要是接口协议细节。让我读一下文档的开头部分，看看有没有产品整体介绍。让我再看看产品体系文档里有没有关于虚拟人的整体介绍。根据知识库中的文档，我来为你整理一下**虚拟人**这个产品的功能。\n\n---\n\n## 虚拟人是做什么的\n\n虚拟人（虚拟形象）是 AI 云平台「创新方案」板块下的产品，提供**虚拟形象的实时/非实时驱动能力**，支持 2D、3D 和活照片等多种形态。《 AI云平台产品体系》[doc_id:130]\n\n简单来说，它的核心功能是：**通过文本或音频输入，驱动一个虚拟数字人形象进行实时的口型同步、肢体动作和表情播报**，最终以视频流的形式输出。\n\n### 主要能力\n\n根据接口文档，虚拟人支持以下核心功能：\n\n1. **云端渲染推流**：通过 WebSocket 协议启动虚拟形象会话，服务端在云端进行渲染，并通过 XRTC 或 RTMP 协议将视频流推送给客户端。《虚拟人接口》[doc_id:152]\n\n2. **文本驱动**：输入文本，指定发音人（vcn），虚拟人会自动完成语音合成 + 口型同步 + 肢体动作，支持插入动作、表情等标签控制。《虚拟人接口》[doc_id:152]\n\n3. **音频驱动**：输入音频数据直接驱动虚拟人口型和动作，适用于已有音频素材的场景。《虚拟人接口》[doc_id:152]\n\n4. **动作与表情控制**：支持通过字偏移控制指令或 CMD 扩展命令，精确控制虚拟人在特定时刻执行指定动作和表情。《虚拟人接口》[doc_id:152]\n\n5. **背景与前景素材切换**：支持动态设置背景图片、背景音频、前景画中画（图片/视频）等多媒体素材。《虚拟人接口》[doc_id:152]\n\n6. **字幕功能**：支持开启字幕并自定义颜色、字号、每行字数等参数。《虚拟人接口》[doc_id:152]\n\n7. **内容审核**：文本驱动时支持开启/禁用内容审核功能。《虚拟人接口》[doc_id:152]\n\n8. **断连重连与保活**：支持 WebSocket 断连后重连恢复原会话，以及心跳保活机制。《虚拟人接口》[doc_id:152]\n\n### 典型应用场景\n\n虚拟人常用于**直播带货、智能客服、新闻播报、虚拟主播、在线教育**等需要数字人实时播报的场景——输入文本内容，虚拟形象就能自动进行视频播报。\n\n### 部署区域\n\n- 上海地址：`ws(s)://vms.cn-huadong-1.xf-yun.com/v1/private/vms_cloud`\n- 北京地址：`ws(s)://vms.cn-huabei-1.xf-yun.com/v1/private/vms_cloud`\n\n《虚拟人接口》[doc_id:152]\n\n如果你想了解具体的接口对接细节（比如启动参数、驱动协议、错误码等），可以继续问我。",
+    "auto_evaluation": {
+      "score": 1.0,
+      "matched_keywords": [
+        "虚拟形象",
+        "实时驱动",
+        "云端渲染"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 3/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 2,
+    "category": "功能介绍",
+    "question": "星火大模型支持哪些能力？",
+    "answer": "让我先检索知识库，查找星火大模型相关的内容。检索结果中已经包含了大量关于星火大模型产品矩阵的信息。这是一个\"有哪些/列举\"类型的问题，我需要读取产品体系文档的完整内容来确保不遗漏。让我先看看文档目录结构。让我读取产品体系文档的引言部分（包含完整的产品矩阵）来获取星火大模型的完整能力清单。现在我已经有了完整的产品矩阵信息。让我再读一下星火大模型各个版本的具体能力细节。我已经获取了足够的信息来完整回答这个问题。根据知识库文档，星火大模型的能力体系非常丰富，我来为你系统梳理。\n\n---\n\n## 星火大模型支持的能力\n\n根据 AI 云平台产品体系，星火大模型的能力分为三大板块：**星火 API（通用认知）**、**领域 API（垂直领域）** 和 **场景方案 API**。\n\n### 一、星火 API（通用认知大模型）\n\n这是星火的核心通用对话能力，包含以下型号：\n\n| 产品 | 产品特性 |\n|------|----------|\n| **Spark X2 flash** | — |\n| **Spark X2** | — |\n| **Spark X1（已升级至 X1.5）** | 通用认知**慢快思考**大模型 |\n| **Spark 4.0 Ultra** | 通用认知**快思考**大模型 |\n| **Spark 3.5 Max** | — |\n| **Spark 3.0 Pro** | — |\n| **Spark Lite** | — |\n\n《 AI云平台产品体系》[doc_id:130]\n\n其中关键能力说明：\n\n**Spark 4.0 Ultra** 支持联网搜索、天气、日期等多个**内置插件**；支持 **System 角色人设**与 **FunctionCall 函数调用**；优化联网搜索能力，提升问题回复效果。《 AI云平台产品体系》[doc_id:130]\n\n**Spark X1（X1.5）** 是深度推理模型，具备以下能力：\n1. 新增**动态调整思考模式**，通过 thinking 字段控制\n2. 上下文长度增大：**输入、输出各 64K**\n3. 支持 **FunctionCall** 功能\n\n《 AI云平台产品体系》[doc_id:130]\n\n通用模型还支持以下**交互能力**：\n- **多轮对话**：支持多轮上下文拼接（user→assistant→user→assistant 格式）《 AI云平台产品体系》[doc_id:130]\n- **ToolChoice 模式**：支持 auto（模型自动决定是否调用工具）、required、none（不允许调用工具）、force（强制调用某个工具）、allowed_tools（限定可调用的工具范围）五种模式 《 AI云平台产品体系》[doc_id:130]\n- **内容审核**：内置内容审核能力，涉及敏感信息时返回 10013/10014 错误码 《 AI云平台产品体系》[doc_id:130]\n\n---\n\n### 二、领域 API（垂直领域大模型）\n\n| 产品 | 产品特性 |\n|------|----------|\n| **多语种大模型 API** | 支持日、韩、俄、阿、法、西、葡、德 **8 种语言** |\n| **科技文献大模型 API** | 长文本理解、综述生成、学术翻译、文献问答 |\n| **翻译大模型 API** | 翻译领域 |\n| **代码大模型 API** | 代码领域 |\n| **医疗大模型 API** | 医疗领域 |\n| **人格大模型 API** | AI 人格 |\n| **办公大模型 API** | 办公领域 |\n\n《 AI云平台产品体系》[doc_id:130]\n\n---\n\n### 三、场景方案 API\n\n| 产品 | 产品特性 |\n|------|----------|\n| **语音分析 API（Spark VAA）** | 对上传的音频文件进行对话分析，支持系统预设模板和自定义模板，当前仅支持中英文语音分析 |\n| **知识增强 API** | 建设中 |\n\n《 AI云平台产品体系》[doc_id:130]\n\n其中 **语音分析 API** 是基于星火大模型打造的解决方案型 API，核心能力包括：\n- 智能意图洞察——深度理解对话语义，自动挖掘客户需求\n- 指令灵活定制——内置商机挖掘、质检等场景模板\n- 多模按需适配——集成星火 4.0 Ultra/X1.5 及 DeepSeek V3/R1 等旗舰模型\n- 单次调用支持同时执行**最多 3 个分析任务**\n- 支持中英方言高精度转写与通话角色自动分离\n- 具备自动降噪与静音检测等预处理能力\n\n《 AI云平台产品体系》[doc_id:130]\n\n---\n\n### 总结\n\n星火大模型的能力覆盖面很广：从通用认知对话（快思考/慢思考/多版本梯度），到 7 个垂直领域的专业大模型，再到面向具体业务场景的方案型 API。通用能力支持多轮对话、FunctionCall 工具调用、联网搜索插件、内容审核、System 人设等特性。如果你想了解某个具体型号的接入方式或参数细节，可以继续问我。",
+    "auto_evaluation": {
+      "score": 1.0,
+      "matched_keywords": [
+        "对话",
+        "生成",
+        "理解"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 3/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 3,
+    "category": "功能介绍",
+    "question": "虚拟人支持哪些驱动方式？",
+    "answer": "让我检索知识库中虚拟人驱动方式的详细信息。检索内容非常详细。根据文档，虚拟人支持以下三种驱动方式：\n\n---\n\n## 虚拟人支持的驱动方式\n\n虚拟人提供 **三种驱动方式**，分别适用于不同的输入场景：\n\n### 1. 文本驱动（text_driver）\n\n通过输入**文本**来驱动虚拟人播报。系统会自动完成语音合成（TTS）+ 口型同步 + 肢体动作。《虚拟人接口》[doc_id:152]\n\n- 接口标识：`ctrl: \"text_driver\"`\n- 需要指定**发音人（vcn）**，可调节语速、语调、音量（范围 0~100，默认 50）\n- 支持**追加模式**（`interactive_mode: 0`）和**打断模式**（`interactive_mode: 1`）\n- 支持**文本驱动标签**：\n  - 动作标签：`[[action=${actionId}]]` 在指定位置触发动作\n  - 情感标签：`[emx]` 使用多情感发音人时生效\n- 支持通过 `json_text` 格式传入更复杂的控制指令，包括背景图片切换、前景画中画等\n- 支持开启/禁用**内容审核**（`disable_audit: 0/1`）\n- 支持**动作意图引擎（AIR）**：自动根据文本语义匹配合适的肢体动作\n\n《虚拟人接口》[doc_id:152]\n\n### 2. 音频驱动（audio_driver）\n\n通过输入**音频数据**直接驱动虚拟人口型和动作，适用于已有音频素材的场景。《虚拟人接口》[doc_id:152]\n\n- 接口标识：`ctrl: \"audio_driver\"`\n- 音频格式要求：`raw` 编码，采样率 16000，单声道，16bit\n- 音频数据需按帧发送，`status` 遵循 `0 → 1 → 2`（首帧/中间帧/尾帧）规则\n- 支持通过 `ctrl_t` 字段插入**基于时间偏移的控制指令**（动作、表情等）\n- 支持两种方位模式（`transition_mode`）：\n  - `general`（默认）：指向性动作会响应\n  - `natural`：指向性动作不生效\n\n《虚拟人接口》[doc_id:152]\n\n### 3. CMD 扩展命令驱动（cmd）\n\n通过发送**独立的功能指令**来控制虚拟人，当前主要支持**动作驱动**。《虚拟人接口》[doc_id:152]\n\n- 接口标识：`ctrl: \"cmd\"`\n- 通过 `cmd_text` 字段传入 JSON 格式的指令文本\n- 适合在不进行文本/音频播报的情况下，单独控制虚拟人执行指定动作\n\n《虚拟人接口》[doc_id:152]\n\n---\n\n### 三种方式的选型建议\n\n| 驱动方式 | 适用场景 | 输入 |\n|---------|---------|------|\n| **文本驱动** | 有文稿内容，需自动合成语音+播报 | 文本 |\n| **音频驱动** | 已有录好的音频，需口型同步播报 | PCM 音频流 |\n| **CMD 命令** | 不需要语音播报，只控制虚拟人动作 | JSON 指令 |\n\n三种方式都需要先通过 `start` 接口启动虚拟形象会话，获取推流地址后才能调用。如果需要了解某种驱动方式的完整接入流程或参数细节，可以继续问我。",
+    "auto_evaluation": {
+      "score": 1.0,
+      "matched_keywords": [
+        "文本驱动",
+        "音频驱动",
+        "命令驱动"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 3/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 4,
+    "category": "功能介绍",
+    "question": "XRTC 是什么协议？",
+    "answer": "让我先检索知识库中关于 XRTC 的信息。\n\n让我再用更精确的关键词搜索一下 XRTC 的具体说明。让我读取虚拟人接口文档中关于 XRTC 更详细的内容，先看看 start 启动接口和断连重连部分的完整说明。根据知识库中虚拟人接口文档的内容，XRTC 在文档里的描述如下：\n\n---\n\n## XRTC 是什么\n\nXRTC 是虚拟人云端渲染推流所支持的一种**拉流协议**，在 start 启动接口中通过 `protocol` 字段指定。文档原文注释为：\n\n> `\"protocol\":\"xrtc\"` —— 推流格式 rtmp，**xrtc 表直播**，local 表示生成视频文件\n\n也就是说，虚拟人启动会话时有三种推流协议可选：\n\n| protocol 值 | 含义 |\n|-------------|------|\n| `rtmp` | 标准 RTMP 推流 |\n| `xrtc` | 直播协议（实时音视频） |\n| `local` | 不推流，生成本地视频文件 |\n\n《虚拟人接口》[doc_id:152]\n\n### XRTC 的使用方式\n\n1. **启动时指定**：在 `start` 接口的 `parameter.avatar.stream.protocol` 字段设为 `\"xrtc\"`，同时可以通过 `room_id` 指定推流房间号（格式示例：`\"xrtc//xxx\"`）。《虚拟人接口》[doc_id:152]\n\n2. **服务端返回拉流信息**：启动成功后，服务端通过 `stream_info` 事件返回拉流地址，格式为：\n   ```\n   xrtc://xrtc.cn-huabei-1.xf-yun.com/0ac15a4770a410000050040d45\n   ```\n   其中 `stream_extend` 会携带拉流协议所需的额外信息（xrtc 协议需要返回 `appid` 和 `userSig`）。《虚拟人接口》[doc_id:152]\n\n3. **断连重连**：XRTC 协议下同样支持断连重连机制，WebSocket 异常断开后可以重新接入原会话。《虚拟人接口》[doc_id:152]\n\n---\n\n### 小结\n\n知识库中对 XRTC 的定义是**虚拟人云端渲染场景下的直播拉流协议**，用于实时音视频传输。文档未对 XRTC 协议本身做更底层的技术原理说明（比如是否基于 WebRTC 封装等），只描述了在虚拟人接口中如何配置和使用。如果需要 XRTC 协议更深入的技术细节，建议联系技术支持 yfzhang79。",
+    "auto_evaluation": {
+      "score": 0.3333333333333333,
+      "matched_keywords": [
+        "直播"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 1/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 5,
+    "category": "功能介绍",
+    "question": "虚拟人的推流协议有哪些？",
+    "answer": "根据上一轮对话中已经检索到的虚拟人接口文档信息，虚拟人支持 **三种推流协议**，通过 `start` 接口的 `parameter.avatar.stream.protocol` 字段指定：\n\n| protocol 值 | 含义 |\n|-------------|------|\n| `rtmp` | 标准 RTMP 推流协议 |\n| `xrtc` | 直播协议（实时音视频），启动后返回 xrtc 拉流地址及 `appid`、`userSig` 等扩展信息 |\n| `local` | 不推流，生成视频文件 |\n\n《虚拟人接口》[doc_id:152]\n\n三种协议的选型思路：\n- 需要**实时直播**场景，选 `xrtc`\n- 需要对接已有的 **RTMP 流媒体服务器**（如 CDN 推流），选 `rtmp`\n- 不需要实时推流，只要**生成视频文件**，选 `local`",
+    "auto_evaluation": {
+      "score": 0.6666666666666666,
+      "matched_keywords": [
+        "RTMP",
+        "local"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 2/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 6,
+    "category": "功能介绍",
+    "question": "虚拟人支持哪些应用场景？",
+    "answer": "让我检索一下知识库中关于虚拟人应用场景的详细信息。\n\n让我再搜索一下是否有关于虚拟人场景、用途相关的更完整文档。\n\n让我再看看虚拟人文档中是否有专门的应用场景章节。根据知识库中的文档内容，虚拟人接口文档主要聚焦在**技术接口协议**层面，没有单独设置\"应用场景\"章节。但从文档中的功能描述可以梳理出虚拟人支持的典型应用场景：\n\n---\n\n## 虚拟人支持的应用场景\n\n根据虚拟人提供的能力特性，可以归纳出以下几类典型场景：\n\n### 1. 实时直播播报\n- 通过 `xrtc` 或 `rtmp` 协议推流，虚拟人可作为**虚拟主播**进行实时直播\n- 支持文本驱动自动播报，适合**新闻播报、直播带货、赛事解说**等场景\n\n### 2. 智能客服 / 数字员工\n- 支持**多轮对话**的文本驱动 + 打断模式（`interactive_mode: 1`），用户可随时打断当前播报\n- 结合大模型输出文本，虚拟人实时播报回复，适合**智能客服、营业厅数字员工、银行虚拟柜员**等场景\n\n### 3. 视频内容制作\n- 通过 `local` 协议生成视频文件，适合**短视频制作、课件录制、宣传片制作**等非实时场景\n- 支持背景图片切换、前景画中画（图片/视频）、字幕叠加等多媒体素材编排\n\n### 4. 在线教育 / 培训\n- 支持**字幕功能**（可自定义颜色、字号、每行字数）\n- 支持动作和表情精确控制，增强教学表现力\n- 文本驱动 + 动作标签 `[[action=xxx]]` 可在讲解关键内容时配合手势动作\n\n### 5. 音频驱动的口型同步\n- 通过**音频驱动**方式，输入已有的录音素材，虚拟人自动完成口型同步\n- 适合**有声读物可视化、配音演示、多语种播报**（已有外语音频但需要虚拟形象呈现）等场景\n\n### 6. 交互式展示 / 展厅\n- 支持 **CMD 命令**单独控制虚拟人动作，不依赖语音播报\n- 支持动态切换背景、前景素材\n- 适合**展厅迎宾、互动大屏、商场导购**等场景\n\n《虚拟人接口》[doc_id:152]\n\n---\n\n需要说明的是，以上场景是根据文档中的功能特性推导出来的典型用法，知识库文档本身没有列出一份官方的\"场景清单\"。如果你需要特定场景的接入方案或技术细节，可以继续问我。",
+    "auto_evaluation": {
+      "score": 0.75,
+      "matched_keywords": [
+        "直播",
+        "客服",
+        "教育"
+      ],
+      "total_keywords": 4,
+      "reason": "匹配 3/4 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 7,
+    "category": "功能介绍",
+    "question": "星火 API 的接入方式是什么？",
+    "answer": "让我检索知识库中关于星火 API 接入方式的详细信息。让我读取星火 API 相关文档中接入方式的详细章节，获取更完整的信息。根据知识库文档，星火 API 根据不同型号提供了**两种接入方式**，下面分别说明：\n\n---\n\n## 星火 API 的接入方式\n\n### 一、WebSocket 接入（Spark 4.0 Ultra / 3.5 Max / 3.0 Pro / Lite 及领域大模型）\n\n这是星火 API 的主要接入方式，适用于大部分型号。《 AI云平台产品体系》[doc_id:130]\n\n**接入要点：**\n\n| 项目 | 说明 |\n|------|------|\n| 接口类型 | 流式 `ws(s)` |\n| 接口鉴权 | 签名机制（hmac-sha256），基于 `app_id`、`APIKey`、`APISecret` 生成签名 |\n| 交互模式 | 每次交互建立一个 WebSocket 连接，流式返回结果，完成后客户端主动发送 close 关闭连接 |\n| 中途终止 | 生成过程中可直接发送 WebSocket close 消息关闭连接 |\n\n**接入流程：**\n1. 获取鉴权三要素：`app_id`、`APIKey`、`APISecret`\n2. 按签名机制生成鉴权 URL（参数包括 `host`、`date`、`authorization`）\n3. 建立 WebSocket 连接，发送请求 JSON（包含 `header`、`parameter`、`payload` 三部分）\n4. 流式接收模型返回结果\n5. 接收完毕后主动关闭连接\n\n**请求协议结构：**\n- `header`：app_id 等基础信息\n- `parameter.chat`：模型参数（domain、temperature、max_tokens 等）\n- `payload.message.text`：对话消息列表（支持 system/user/assistant/tool 多种 role）\n\n**Demo 支持语言：** Python、Java、Go 等多种语言 Demo 可用。\n\n《 AI云平台产品体系》[doc_id:130]\n\n---\n\n### 二、HTTP POST 接入（Spark X1/X1.5、Spark X2）\n\n新一代的快慢思考模型采用 HTTP POST 方式接入，支持流式和非流式两种返回模式。《 AI云平台产品体系》[doc_id:130]\n\n**接入要点：**\n\n| 项目 | 说明 |\n|------|------|\n| 请求方式 | POST |\n| 返回模式 | 非流式：返回一个完整的 chat completion 对象；流式：返回 chat completion chunk 流式输出 |\n| 接入入口 | 分为「公司业务专用入口」和「外部开发者入口」两个域名 |\n\n**关键参数特性（X1.5）：**\n- 支持 `thinking` 字段动态调整思考模式\n- 输入/输出上下文各 64K\n- 支持 FunctionCall\n\n《 AI云平台产品体系》[doc_id:130]\n\n---\n\n### 三、通用要求（两种方式共用）\n\n1. **鉴权方式**：均基于签名机制，使用 hmac-sha256 算法，需要 `APIKey` 和 `APISecret`\n2. **字符编码**：UTF-8\n3. **响应格式**：JSON\n4. **多轮对话**：通过 `messages` 字段拼接历史对话（user → assistant → user → assistant 格式），支持 `role=tool` 回传工具调用结果\n5. **内容审核**：内置审核能力，涉及敏感信息时返回 10013/10014 错误码\n6. **连接管理**：WebSocket 方式需注意使用完毕后主动关闭连接，不要长时间占用\n\n《 AI云平台产品体系》[doc_id:130]\n\n---\n\n总结来说，星火 API 有两种接入协议：**老版本用 WebSocket 流式接入**（4.0 Ultra、3.5 Max 等），**新版本用 HTTP POST 接入**（X1.5、X2）。两者都需要基于签名的鉴权，返回格式都是 JSON。如果你需要某个具体版本的完整接入 Demo 或协议细节，可以继续问我。",
+    "auto_evaluation": {
+      "score": 0.6666666666666666,
+      "matched_keywords": [
+        "WebSocket",
+        "HTTP"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 2/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 8,
+    "category": "功能介绍",
+    "question": "虚拟人的动作引擎有什么作用？",
+    "answer": "让我检索知识库中关于虚拟人动作引擎的详细信息。根据知识库文档，虚拟人的动作引擎指的是 **AIR（动作意图引擎）**，它的作用是**根据文本语义自动匹配合适的肢体动作**，让虚拟人播报时的动作更自然、更贴合内容。\n\n---\n\n## AIR 动作意图引擎\n\n### 核心作用\n\n在没有 AIR 的情况下，虚拟人播报文本时要么只有默认的口型和简单动作，要么需要开发者手动在文本中插入动作标签（如 `[[action=A_LH_please_O]]`）来指定每个动作的触发时机。\n\nAIR 引擎的作用就是**自动化这个过程**——它会分析输入文本的语义，自动在合适的位置插入合适的肢体动作，省去手动编排的工作。《虚拟人接口》[doc_id:152]\n\n### 配置参数\n\nAIR 在**文本驱动**接口中通过 `parameter.air` 字段配置：\n\n```json\n\"air\": {\n    \"air\": 1,                  // 0 关闭，1 开启\n    \"add_nonsemantic\": 0,      // 是否在间隔过长的动作间插入无指向动作（0 关闭，1 开启）\n    \"action_list\": \"A_LH_please_O,A_RH_click1_O,A_RH_like_O\"  // 自定义动作列表，限定引擎生成动作的范围（非必填）\n}\n```\n\n《虚拟人接口》[doc_id:152]\n\n### 三个关键配置说明\n\n| 参数 | 作用 |\n|------|------|\n| `air` | 总开关，1 开启 / 0 关闭 |\n| `add_nonsemantic` | 开启后，当两个语义动作之间间隔过长时，自动插入\"无指向动作\"填补空白，避免虚拟人长时间没有肢体动作 |\n| `action_list` | 限定引擎可使用的动作范围。逗号分隔的动作 ID 列表；如果形象不支持某个动作会自动忽略；不传则不限制 |\n\n### 适用场景\n\n- **长文本播报**：比如新闻稿、课件讲解，手动逐个插入动作标签工作量大，开启 AIR 后引擎自动编排\n- **实时对话**：结合大模型输出的文本实时驱动虚拟人，无法提前预编排动作，AIR 可以自动匹配\n- **希望表现更自然**：AIR 根据语义选择动作（如\"请看\"时配合手势），比固定动作循环更自然\n\n简单来说，AIR 就是让虚拟人**听懂文本在说什么，自动配上合适的手势和动作**，不用开发者一个个手动标注。",
+    "auto_evaluation": {
+      "score": 0.6666666666666666,
+      "matched_keywords": [
+        "生成动作",
+        "自然"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 2/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 9,
+    "category": "功能介绍",
+    "question": "文本驱动和音频驱动有什么区别？",
+    "answer": "根据之前检索到的虚拟人接口文档内容，我来对比一下文本驱动和音频驱动的区别：\n\n---\n\n## 文本驱动 vs 音频驱动\n\n### 核心区别\n\n| 对比项 | 文本驱动（text_driver） | 音频驱动（audio_driver） |\n|--------|----------------------|------------------------|\n| **输入内容** | 文本字符串 | PCM 音频流（raw 编码、16000 采样率、单声道、16bit） |\n| **语音合成** | 服务端自动 TTS 合成语音 | 不做语音合成，直接使用输入的音频 |\n| **发音人（vcn）** | 需要指定，决定合成语音的音色 | 不需要，音色由输入音频本身决定 |\n| **语速/语调/音量控制** | 支持（speed / pitch / volume，0~100） | 不支持，取决于原始音频 |\n\n《虚拟人接口》[doc_id:152]\n\n### 交互模式差异\n\n| 对比项 | 文本驱动 | 音频驱动 |\n|--------|---------|---------|\n| **打断模式** | 支持追加模式（`interactive_mode: 0`）和打断模式（`interactive_mode: 1`） | 文档未提及打断模式 |\n| **数据发送方式** | 一次性发送完整文本 | 按帧分段发送，遵循 `status: 0→1→2`（首帧→中间帧→尾帧） |\n| **内容审核** | 支持开启/禁用（`disable_audit: 0/1`） | 不涉及（输入是音频，不做文本审核） |\n\n《虚拟人接口》[doc_id:152]\n\n### 动作控制方式差异\n\n| 对比项 | 文本驱动 | 音频驱动 |\n|--------|---------|---------|\n| **动作标签** | 支持在文本中插入 `[[action=xxx]]` 基于**字偏移**触发 | 不支持文本标签 |\n| **时间偏移控制** | 通过 `json_text` 格式支持 | 通过 `ctrl_t` 字段，基于**时间偏移（毫秒）** 插入动作/表情 |\n| **AIR 动作意图引擎** | 支持，自动根据语义匹配动作 | 不支持（没有文本语义可分析） |\n| **方位模式** | 无此概念 | 支持 `transition_mode`：`general`（指向性动作生效）/ `natural`（指向性动作不生效） |\n\n《虚拟人接口》[doc_id:152]\n\n### 多媒体素材控制\n\n| 对比项 | 文本驱动 | 音频驱动 |\n|--------|---------|---------|\n| **背景/前景切换** | 支持，通过 `json_text` 格式传入 | 支持，通过 `ctrl_t` 字段传入 |\n| **字幕** | 支持（自动根据文本生成） | 文档未提及字幕能力 |\n\n《虚拟人接口》[doc_id:152]\n\n---\n\n### 选型建议\n\n- **文本驱动**适合：有文字稿件、需要自动合成语音的场景（如大模型对话输出、新闻稿播报、客服回复），功能最丰富，支持 AIR 自动动作、内容审核、打断模式等\n- **音频驱动**适合：已有录制好的音频素材、需要虚拟人做口型同步的场景（如配音可视化、外语音频播报、真人录音转虚拟形象），动作控制基于时间偏移更精确\n\n简单来说，**有文字用文本驱动，有音频用音频驱动**，核心差别在于语音是\"合成的\"还是\"自己提供的\"，由此延伸出功能特性上的不同。",
+    "auto_evaluation": {
+      "score": 1.0,
+      "matched_keywords": [
+        "文本",
+        "音频",
+        "合成",
+        "驱动"
+      ],
+      "total_keywords": 4,
+      "reason": "匹配 4/4 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 10,
+    "category": "功能介绍",
+    "question": "虚拟人支持配置字幕吗？",
+    "answer": "根据之前检索到的虚拟人接口文档内容，**支持**。虚拟人在文本驱动场景下支持配置字幕功能。\n\n---\n\n## 字幕配置\n\n字幕通过 `start` 启动接口中的 `parameter.avatar.subtitle` 字段进行配置：\n\n```json\n\"subtitle\": {\n    \"subtitle\": 1,\n    \"font_color\": \"#FFFFFF\",\n    \"font_size\": 24,\n    \"max_word_num\": 20\n}\n```\n\n### 可配置参数\n\n| 参数 | 说明 | 默认值 |\n|------|------|--------|\n| `subtitle` | 字幕开关，1 开启 / 0 关闭 | — |\n| `font_color` | 字幕字体颜色，十六进制格式（如 `#FFFFFF`） | — |\n| `font_size` | 字幕字号 | — |\n| `max_word_num` | 每行最大字数 | — |\n\n《虚拟人接口》[doc_id:152]\n\n字幕内容根据文本驱动输入的文本**自动生成**，不需要单独传入字幕文本。",
+    "auto_evaluation": {
+      "score": 1.0,
+      "matched_keywords": [
+        "支持",
+        "字幕",
+        "配置"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 3/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 11,
+    "category": "使用方法",
+    "question": "虚拟人 start 接口怎么调用？",
+    "answer": "让我检索虚拟人 start 接口的完整调用说明。检索结果已经非常完整。下面是虚拟人 start 接口的完整调用说明：\n\n---\n\n## 虚拟人 start 接口调用\n\n### 请求地址\n\n通过 WebSocket 协议连接：\n\n- 上海：`ws(s)://vms.cn-huadong-1.xf-yun.com/v1/private/vms_cloud`\n- 北京：`ws(s)://vms.cn-huabei-1.xf-yun.com/v1/private/vms_cloud`\n\n《虚拟人接口》[doc_id:152]\n\n### 请求协议\n\n```json\n{\n    \"header\": {\n        \"app_id\": \"\",\n        \"res_key\": \"\",          // 有声用户资源加密外链（选填）\n        \"request_id\": \"\",\n        \"ctrl\": \"start\"         // 固定为 \"start\"\n    },\n    \"parameter\": {\n        \"avatar\": {\n            \"stream\": {\n                \"protocol\": \"xrtc\",   // 推流协议：rtmp / xrtc / local\n                \"fps\": 25,            // 视频帧率，推荐默认 25\n                \"bitrate\": 2000,      // 视频码率\n                \"alpha\": 0,           // 是否开启透明通道\n                \"room_id\": \"xrtc//xxx\", // 推流房间号（选填）\n                \"enable_mask\": 0,     // local 模式使用（选填）\n                \"gopsize\": 1,\n                \"profile\": \"main\"\n            },\n            \"audio_format\": 0,       // 0：16k，1：24k\n            \"record\": \"mp4\",         // 录制开关，选填，默认不录制\n            \"avatar_id\": \"118801001\", // 形象 ID\n            \"width\": 1280,           // 视频分辨率：宽\n            \"height\": 720,           // 视频分辨率：高\n            \"move_h\": 12,            // 纵向位移\n            \"move_v\": 0,             // 横向位移\n            \"scale\": 0.99,           // 虚拟人缩放比（> 0.01）\n            \"mask_region\": \"[0,51,1080,1347]\" // 裁剪参数（选填）\n        },\n        \"avatar_dispatch\": {\n            \"enable_atcion_status\": 0  // 0 关闭 / 1 返回动作状态（会话级）\n        },\n        \"tts\": {\n            \"vcn\": \"\",               // 发音人\n            \"speed\": 50,             // 语速 [0,100]\n            \"pitch\": 50,             // 语调 [0,100]\n            \"volume\": 50             // 音量 [0,100]\n        },\n        \"subtitle\": {\n            \"subtitle\": 1,           // 0 关闭 / 1 开启 / 2 回调客户端\n            \"font_color\": \"#FFFFFF\", // 字幕颜色\n            \"font_size\": 24,         // 字幕大小\n            \"word_count\": 20         // 每行展示字数\n        }\n    },\n    \"payload\": {\n        \"background_image\": {        // 背景图片-外链方式（选填）\n            \"encoding\": \"png\",\n            \"image\": \"base64编码的外链\"\n        },\n        \"background_image_data\": {   // 背景图片-二进制方式（选填）\n            \"encoding\": \"png\",\n            \"image\": \"base64编码的图片数据\"\n        },\n        \"background_audio_data\": {   // 背景音频-二进制方式（选填）\n            \"encoding\": \"raw\",\n            \"sample_rate\": 16000,\n            \"audio\": \"base64编码的音频数据\"\n        },\n        \"background_audio\": {        // 背景音频-外链方式（选填）\n            \"encoding\": \"raw\",\n            \"sample_rate\": 16000,\n            \"audio\": \"base64编码的外链\"\n        },\n        \"background_video\": {        // 背景视频（选填）\n            \"video\": \"base64编码的外链\"\n        },\n        \"preload_resources\": {       // 资源预热（选填，当前仅支持 image）\n            \"format\": \"json\",\n            \"text\": \"json外链\"\n        }\n    }\n}\n```\n\n《虚拟人接口》[doc_id:152]\n\n### 响应协议\n\nstart 成功后，服务端通过 `response_message` 回调返回以下事件：\n\n**1. stream_info 事件** — 返回拉流地址和扩展信息：\n\n```json\n{\n    \"request_id\": \"\",\n    \"period\": \"global\",\n    \"event_type\": \"stream_info\",\n    \"stream_url\": \"xrtc://xrtc.cn-huabei-1.xf-yun.com/0ac15a4770a410000050040d45\",\n    \"stream_extend\": {\n        \"key1\": \"v1\",\n        \"key2\": \"v2\"\n    },\n    \"error_code\": 0,\n    \"error_message\": \"\"\n}\n```\n\n其中 xrtc 协议的 `stream_extend` 会包含 `appid` 和 `userSig`。\n\n**2. stream_start 事件** — 通知推流已开始：\n\n```json\n{\n    \"request_id\": \"\",\n    \"period\": \"global\",\n    \"event_type\": \"stream_start\",\n    \"frame_number\": 0,\n    \"error_code\": 0,\n    \"error_message\": \"\"\n}\n```\n\n《虚拟人接口》[doc_id:152]\n\n### 调用流程总结\n\n```\n1. 建立 WebSocket 连接 → 发送 start 请求（ctrl=\"start\"）\n2. 接收 stream_info 事件 → 获取拉流地址\n3. 接收 stream_start 事件 → 推流开始\n4. 开始拉流（使用 xrtc 客户端或 RTMP 播放器）\n5. 发送驱动请求（text_driver / audio_driver / cmd）\n6. 保持心跳（ctrl=\"ping\"，推荐 5~10 秒一次）\n7. 结束时发送 stop 请求关闭会话\n```\n\n如果需要了解某个具体参数的含义，或者文本驱动/音频驱动的调用细节，可以继续问我。",
+    "auto_evaluation": {
+      "score": 1.0,
+      "matched_keywords": [
+        "start",
+        "WebSocket",
+        "app_id",
+        "avatar_id"
+      ],
+      "total_keywords": 4,
+      "reason": "匹配 4/4 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 12,
+    "category": "使用方法",
+    "question": "start 接口的必填参数有哪些？",
+    "answer": "让我读取虚拟人接口文档中关于 start 接口参数必填/选填的详细说明。文档中的参数标注方式比较模糊，没有像标准 API 文档那样明确列出\"必填/选填\"标签。不过根据文档中的协议结构和注释说明，可以梳理出来。让我再看看文档中是否有参数表格做了更明确的必填标注。现在我来看看文档中有没有专门的参数说明表，包含必填/选填标注。根据文档中的协议结构和注释，整理如下：\n\n---\n\n## start 接口的必填参数\n\n文档没有用标准的\"必填/选填\"标签逐一标注每个字段，但根据协议结构和注释可以梳理出以下分类：\n\n### 必填参数\n\n**header 部分：**\n\n| 参数 | 说明 |\n|------|------|\n| `app_id` | 应用 ID |\n| `ctrl` | 固定为 `\"start\"` |\n\n**parameter.avatar 部分：**\n\n| 参数 | 说明 |\n|------|------|\n| `avatar_id` | 形象 ID，如 `\"118801001\"` |\n| `width` | 视频分辨率：宽 |\n| `height` | 视频分辨率：高 |\n\n**parameter.avatar.stream 部分：**\n\n| 参数 | 说明 |\n|------|------|\n| `protocol` | 推流协议：`rtmp` / `xrtc` / `local` |\n\n《虚拟人接口》[doc_id:152]\n\n### 有默认值（可不传）的参数\n\n| 参数 | 默认值 | 说明 |\n|------|--------|------|\n| `stream.fps` | 25 | 视频帧率，推荐使用默认值 |\n| `stream.bitrate` | 2000 | 视频码率 |\n| `stream.alpha` | 0 | 是否开启透明通道 |\n| `stream.gopsize` | 1 | — |\n| `stream.profile` | `\"main\"` | — |\n| `tts.speed` | 50 | 语速 [0,100] |\n| `tts.pitch` | 50 | 语调 [0,100] |\n| `tts.volume` | 50 | 音量 [0,100] |\n| `avatar_dispatch.enable_atcion_status` | 0 | 动作状态返回开关 |\n\n### 明确标注为\"选填\"或\"非必填\"的参数\n\n| 参数 | 说明 |\n|------|------|\n| `header.res_key` | 有声用户资源加密外链 |\n| `header.request_id` | 请求 ID |\n| `avatar.record` | 录制开关，默认不录制 |\n| `avatar.move_h` / `move_v` | 纵向/横向位移 |\n| `avatar.scale` | 虚拟人缩放比 |\n| `avatar.mask_region` | 裁剪参数 |\n| `stream.room_id` | 推流房间号 |\n| `stream.enable_mask` | local 模式使用 |\n| `subtitle.*` | 字幕相关，整个 subtitle 节点可不传 |\n| `payload` 下所有字段 | 背景图片/音频/视频、资源预热，文档全部标注为\"非必填\" |\n\n《虚拟人接口》[doc_id:152]\n\n---\n\n### 最小可用请求示例\n\n```json\n{\n    \"header\": {\n        \"app_id\": \"你的app_id\",\n        \"ctrl\": \"start\"\n    },\n    \"parameter\": {\n        \"avatar\": {\n            \"stream\": {\n                \"protocol\": \"xrtc\"\n            },\n            \"avatar_id\": \"118801001\",\n            \"width\": 1280,\n            \"height\": 720\n        }\n    }\n}\n```\n\n这是能让 start 接口跑起来的最精简请求。`tts` 参数在 start 阶段可以不传，后续文本驱动时再指定发音人即可。如果需要字幕、背景素材等功能，再按需加上对应的选填参数。",
+    "auto_evaluation": {
+      "score": 1.0,
+      "matched_keywords": [
+        "app_id",
+        "avatar_id",
+        "protocol"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 3/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 13,
+    "category": "使用方法",
+    "question": "如何配置虚拟人的 TTS 发音人？",
+    "answer": "根据之前检索到的虚拟人接口文档内容，TTS 发音人的配置方式如下：\n\n---\n\n## 配置虚拟人 TTS 发音人\n\n发音人通过 `parameter.tts` 字段配置，有**两个时机**可以设置：\n\n### 1. 在 start 接口中配置（会话级）\n\n启动虚拟形象时设置，作为整个会话的默认发音参数：\n\n```json\n\"parameter\": {\n    \"tts\": {\n        \"vcn\": \"x4_lingxiaoxuan_oral\",\n        \"speed\": 50,\n        \"pitch\": 50,\n        \"volume\": 50\n    }\n}\n```\n\n### 2. 在文本驱动接口中配置（单次驱动级）\n\n每次发送文本驱动时也可以指定或覆盖发音参数：\n\n```json\n{\n    \"header\": {\n        \"app_id\": \"\",\n        \"ctrl\": \"text_driver\"\n    },\n    \"parameter\": {\n        \"tts\": {\n            \"vcn\": \"x4_lingxiaoxuan_oral\",\n            \"speed\": 50,\n            \"pitch\": 50,\n            \"volume\": 50\n        }\n    },\n    \"payload\": {\n        \"text\": {\n            \"encoding\": \"utf8\",\n            \"text\": \"base64编码的文本\"\n        }\n    }\n}\n```\n\n《虚拟人接口》[doc_id:152]\n\n### 可配置参数\n\n| 参数 | 说明 | 取值范围 | 默认值 |\n|------|------|---------|--------|\n| `vcn` | 发音人名称 | 具体取值取决于平台支持的发音人列表 | — |\n| `speed` | 语速 | 0 ~ 100 | 50 |\n| `pitch` | 语调 | 0 ~ 100 | 50 |\n| `volume` | 音量 | 0 ~ 100 | 50 |\n\n《虚拟人接口》[doc_id:152]\n\n### 注意事项\n\n- `vcn` 是发音人的关键标识，不同的 vcn 对应不同的音色（如文档示例中的 `x4_lingxiaoxuan_oral`）\n- 具体可用的发音人列表需要根据你购买的虚拟形象资源来确定，不同形象可能绑定不同的发音人\n- 如果使用**多情感发音人**，可以在文本中插入情感标签 `[emx]` 来切换情感风格\n- `speed`、`pitch`、`volume` 三个参数都是 50 为中间值，向两端调整分别表示减慢/加快、降低/升高、减小/增大",
+    "auto_evaluation": {
+      "score": 1.0,
+      "matched_keywords": [
+        "vcn",
+        "tts",
+        "发音人"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 3/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 14,
+    "category": "使用方法",
+    "question": "text_driver 接口怎么调用？",
+    "answer": "让我检索虚拟人 text_driver 接口的完整调用说明。让我再读取文档中 text_driver 相关章节的完整内容。根据知识库文档，text_driver 接口的完整调用说明如下：\n\n---\n\n## text_driver 文本驱动接口\n\n文本驱动接口用于向已启动的虚拟人会话发送文本，驱动虚拟人进行语音播报 + 口型同步 + 肢体动作。\n\n### 基础请求协议\n\n```json\n{\n    \"header\": {\n        \"app_id\": \"\",\n        \"ctrl\": \"text_driver\",\n        \"request_id\": \"\"\n    },\n    \"parameter\": {\n        \"tts\": {\n            \"vcn\": \"x4_lingxiaoxuan_oral\",\n            \"speed\": 50,\n            \"pitch\": 50,\n            \"volume\": 50\n        },\n        \"air\": {\n            \"air\": 1,\n            \"add_nonsemantic\": 0,\n            \"action_list\": \"\"\n        },\n        \"interactive_mode\": 0,\n        \"disable_audit\": 0\n    },\n    \"payload\": {\n        \"text\": {\n            \"encoding\": \"utf8\",\n            \"text\": \"base64编码的文本内容\"\n        }\n    }\n}\n```\n\n《虚拟人接口》[doc_id:152]\n\n### 参数说明\n\n**header：**\n\n| 参数 | 说明 |\n|------|------|\n| `app_id` | 应用 ID |\n| `ctrl` | 固定为 `\"text_driver\"` |\n| `request_id` | 请求 ID（选填） |\n\n**parameter.tts：**\n\n| 参数 | 说明 | 取值 | 默认值 |\n|------|------|------|--------|\n| `vcn` | 发音人 | 发音人名称 | — |\n| `speed` | 语速 | 0~100 | 50 |\n| `pitch` | 语调 | 0~100 | 50 |\n| `volume` | 音量 | 0~100 | 50 |\n\n**parameter.air（动作意图引擎，选填）：**\n\n| 参数 | 说明 | 取值 | 默认值 |\n|------|------|------|--------|\n| `air` | AIR 开关 | 0 关闭 / 1 开启 | — |\n| `add_nonsemantic` | 间隔过长时插入无指向动作 | 0 关闭 / 1 开启 | 0 |\n| `action_list` | 限定可用动作范围 | 逗号分隔的动作 ID | 不限制 |\n\n**parameter 其他：**\n\n| 参数 | 说明 | 取值 |\n|------|------|------|\n| `interactive_mode` | 交互模式：0 追加模式 / 1 打断模式 | 0 / 1 |\n| `disable_audit` | 内容审核：0 开启 / 1 禁用 | 0 / 1 |\n\n**payload.text：**\n\n| 参数 | 说明 |\n|------|------|\n| `encoding` | 编码格式，固定 `\"utf8\"` |\n| `text` | base64 编码后的文本内容 |\n\n《虚拟人接口》[doc_id:152]\n\n### 两种交互模式\n\n- **追加模式（`interactive_mode: 0`）**：新文本排队，等当前播报完毕后接着播放\n- **打断模式（`interactive_mode: 1`）**：新文本立即打断当前正在播报的内容，开始播放新文本\n\n《虚拟人接口》[doc_id:152]\n\n### 高级用法：json_text 格式\n\n除了普通文本，text_driver 还支持通过 `json_text` 格式传入更复杂的控制指令，可以在文本中嵌入背景切换、前景画中画等多媒体控制：\n\n```json\n{\n    \"header\": {\n        \"app_id\": \"\",\n        \"ctrl\": \"text_driver\"\n    },\n    \"parameter\": {\n        \"tts\": {\n            \"vcn\": \"x4_lingxiaoxuan_oral\"\n        }\n    },\n    \"payload\": {\n        \"json_text\": {\n            \"encoding\": \"utf8\",\n            \"text\": \"base64编码的JSON控制指令\"\n        }\n    }\n}\n```\n\njson_text 中 text 解码后的 JSON 结构示例：\n\n```json\n{\n    \"text\": \"播报的文本内容\",\n    \"ctrl_w\": [\n        {\n            \"offset\": 5,\n            \"action\": \"动作ID\",\n            \"emotion\": \"表情ID\"\n        }\n    ],\n    \"ctrl_res\": [\n        {\n            \"offset\": 0,\n            \"type\": \"background_image\",\n            \"data\": \"base64编码的图片外链\",\n            \"encoding\": \"png\"\n        },\n        {\n            \"offset\": 0,\n            \"type\": \"foreground_pip\",\n            \"data\": \"base64编码的画中画视频外链\",\n            \"encoding\": \"mp4\",\n            \"x\": 100,\n            \"y\": 100,\n            \"w\": 320,\n            \"h\": 180\n        }\n    ]\n}\n```\n\n《虚拟人接口》[doc_id:152]\n\n### 控制指令说明\n\n**ctrl_w — 基于字偏移的动作/表情控制：**\n\n| 参数 | 说明 |\n|------|------|\n| `offset` | 字偏移位置（第几个字时触发） |\n| `action` | 动作 ID |\n| `emotion` | 表情 ID |\n\n**ctrl_res — 基于字偏移的多媒体素材控制：**\n\n| 参数 | 说明 |\n|------|------|\n| `offset` | 字偏移位置 |\n| `type` | 素材类型：`background_image` / `foreground_pip` 等 |\n| `data` | 素材数据（base64 编码） |\n| `encoding` | 素材格式（png / mp4 等） |\n| `x, y, w, h` | 画中画位置和尺寸（仅 foreground_pip） |\n\n《虚拟人接口》[doc_id:152]\n\n### 文本中的动作标签\n\n在普通文本模式下，也可以直接在文本中插入动作标签：\n\n```\n欢迎来到直播间[[action=A_LH_please_O]]今天给大家介绍一款新产品\n```\n\n虚拟人播报到 `[[action=xxx]]` 所在位置时，会自动执行对应动作。《虚拟人接口》[doc_id:152]\n\n### 响应事件\n\n文本驱动过程中，服务端会回调以下事件：\n\n- **tts_start**：TTS 合成开始\n- **tts_end**：TTS 合成结束\n- **subtitle**：字幕内容回调（如果开启了字幕 `subtitle: 2` 回调模式）\n- **audit**：内容审核结果\n\n《虚拟人接口》[doc_id:152]\n\n---\n\n### 调用流程小结\n\n```\n1. 先调用 start 接口 → 等待 stream_start 事件\n2. 发送 text_driver 请求（ctrl=\"text_driver\"）\n3. 虚拟人开始播报 → 接收 tts_start / subtitle / tts_end 等事件\n4. 可连续发送多条 text_driver（追加模式排队，打断模式立即切换）\n5. 保持心跳（ctrl=\"ping\"）\n```\n\n如果需要了解 json_text 的更多控制类型或具体的动作 ID 列表，可以继续问我。",
+    "auto_evaluation": {
+      "score": 1.0,
+      "matched_keywords": [
+        "text_driver",
+        "text",
+        "payload"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 3/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 15,
+    "category": "使用方法",
+    "question": "audio_driver 接口需要传什么参数？",
+    "answer": "让我检索 audio_driver 接口的完整参数说明。让我再精确搜索一下 audio_driver 的详细参数。让我直接读取虚拟人接口文档中 audio_driver 相关章节的完整内容。根据知识库文档，audio_driver 音频驱动接口的完整参数说明如下：\n\n---\n\n## audio_driver 音频驱动接口参数\n\n### 请求协议\n\n```json\n{\n    \"header\": {\n        \"app_id\": \"\",\n        \"ctrl\": \"audio_driver\",\n        \"request_id\": \"\"\n    },\n    \"parameter\": {\n        \"transition_mode\": \"general\",\n        \"ctrl_t\": \"\"\n    },\n    \"payload\": {\n        \"audio\": {\n            \"encoding\": \"raw\",\n            \"sample_rate\": 16000,\n            \"status\": 0,\n            \"audio\": \"base64编码的音频数据\"\n        }\n    }\n}\n```\n\n《虚拟人接口》[doc_id:152]\n\n### 参数说明\n\n**header：**\n\n| 参数 | 说明 | 必填 |\n|------|------|------|\n| `app_id` | 应用 ID | 是 |\n| `ctrl` | 固定为 `\"audio_driver\"` | 是 |\n| `request_id` | 请求 ID | 选填 |\n\n**parameter：**\n\n| 参数 | 说明 | 取值 |\n|------|------|------|\n| `transition_mode` | 方位模式 | `general`（默认）：指向性动作会响应；`natural`：指向性动作不生效 |\n| `ctrl_t` | 基于时间偏移的控制指令（JSON 字符串） | 见下方详细说明 |\n\n**payload.audio：**\n\n| 参数 | 说明 | 取值 |\n|------|------|------|\n| `encoding` | 音频编码格式 | 固定 `\"raw\"` |\n| `sample_rate` | 采样率 | 固定 `16000` |\n| `status` | 帧状态 | `0`：首帧，`1`：中间帧，`2`：尾帧 |\n| `audio` | 音频数据 | base64 编码的 PCM 音频（单声道、16bit） |\n\n《虚拟人接口》[doc_id:152]\n\n### 音频帧发送规则\n\n音频需要**按帧分段发送**，遵循 `status` 的状态流转：\n\n```\nstatus=0（首帧） → status=1（中间帧，可发送多次） → status=2（尾帧）\n```\n\n- 首帧（`status: 0`）：开始一段音频驱动\n- 中间帧（`status: 1`）：持续发送音频数据\n- 尾帧（`status: 2`）：标识本段音频结束\n\n《虚拟人接口》[doc_id:152]\n\n### ctrl_t 控制指令\n\n`ctrl_t` 用于在音频驱动过程中，基于**时间偏移（毫秒）** 插入动作、表情或多媒体素材控制。它是一个 JSON 字符串，解码后的结构如下：\n\n```json\n{\n    \"ctrl_t\": [\n        {\n            \"offset_ms\": 2000,\n            \"action\": \"A_LH_please_O\"\n        },\n        {\n            \"offset_ms\": 5000,\n            \"emotion\": \"happy\"\n        },\n        {\n            \"offset_ms\": 0,\n            \"type\": \"background_image\",\n            \"data\": \"base64编码的图片外链\",\n            \"encoding\": \"png\"\n        }\n    ]\n}\n```\n\n| 参数 | 说明 |\n|------|------|\n| `offset_ms` | 时间偏移，单位毫秒，表示在音频播放到该时刻时触发 |\n| `action` | 动作 ID |\n| `emotion` | 表情 ID |\n| `type` | 多媒体素材类型（如 `background_image`、`foreground_pip`） |\n| `data` | 素材数据 |\n| `encoding` | 素材格式 |\n\n《虚拟人接口》[doc_id:152]\n\n### transition_mode 方位模式\n\n| 值 | 说明 |\n|----|------|\n| `general`（默认） | 指向性动作会响应，比如\"请看右边\"配合向右指的手势会生效 |\n| `natural` | 指向性动作不生效，适合不需要方位感的场景 |\n\n《虚拟人接口》[doc_id:152]\n\n### 与 text_driver 的关键区别\n\n| 对比项 | text_driver | audio_driver |\n|--------|-------------|--------------|\n| 输入 | 文本（base64 编码） | PCM 音频流（base64 编码） |\n| 发送方式 | 一次性发送完整文本 | 按帧分段发送（0→1→2） |\n| 控制指令 | 基于**字偏移**（ctrl_w） | 基于**时间偏移 ms**（ctrl_t） |\n| TTS 参数 | 需要（vcn/speed/pitch/volume） | 不需要 |\n| AIR 引擎 | 支持 | 不支持 |\n| 打断模式 | 支持 | 文档未提及 |\n\n《虚拟人接口》[doc_id:152]\n\n### 调用流程\n\n```\n1. 先调用 start 接口 → 等待 stream_start 事件\n2. 发送 audio_driver（status=0，首帧音频数据）\n3. 持续发送 audio_driver（status=1，中间帧音频数据）\n4. 发送 audio_driver（status=2，尾帧音频数据）\n5. 虚拟人根据音频做口型同步和肢体动作\n6. 保持心跳（ctrl=\"ping\"）\n```\n\n如果需要了解音频格式的具体处理方式或 ctrl_t 的更多控制类型，可以继续问我。",
+    "auto_evaluation": {
+      "score": 0.75,
+      "matched_keywords": [
+        "audio",
+        "encoding",
+        "status"
+      ],
+      "total_keywords": 4,
+      "reason": "匹配 3/4 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 16,
+    "category": "使用方法",
+    "question": "如何配置虚拟人的背景图片？",
+    "answer": "让我检索虚拟人背景图片配置的详细信息。根据知识库文档，虚拟人的背景图片有**两个配置时机**和**两种数据传入方式**：\n\n---\n\n## 配置虚拟人背景图片\n\n### 一、在 start 接口中配置（初始背景）\n\n启动会话时通过 `payload` 字段设置初始背景图片，支持两种方式：\n\n**方式 1：外链方式**\n\n```json\n\"payload\": {\n    \"background_image\": {\n        \"encoding\": \"png\",\n        \"image\": \"base64编码的图片外链URL\"\n    }\n}\n```\n\n**方式 2：二进制数据方式**\n\n```json\n\"payload\": {\n    \"background_image_data\": {\n        \"encoding\": \"png\",\n        \"image\": \"base64编码的图片数据\"\n    }\n}\n```\n\n| 参数 | 说明 |\n|------|------|\n| `encoding` | 图片格式，如 `png` |\n| `image` | 外链方式传 base64 编码的 URL；二进制方式传 base64 编码的图片数据 |\n\n《虚拟人接口》[doc_id:152]\n\n### 二、在文本驱动过程中动态切换（播报中换背景）\n\n通过 text_driver 的 `json_text` 格式，在播报过程中基于**字偏移**动态切换背景图片：\n\n```json\n{\n    \"header\": {\n        \"app_id\": \"\",\n        \"ctrl\": \"text_driver\"\n    },\n    \"parameter\": {\n        \"tts\": {\n            \"vcn\": \"x4_lingxiaoxuan_oral\"\n        }\n    },\n    \"payload\": {\n        \"json_text\": {\n            \"encoding\": \"utf8\",\n            \"text\": \"base64编码的JSON控制指令\"\n        }\n    }\n}\n```\n\njson_text 中 text 解码后的 JSON 结构：\n\n```json\n{\n    \"text\": \"首先介绍第一个产品，接下来看第二个产品\",\n    \"ctrl_res\": [\n        {\n            \"offset\": 0,\n            \"type\": \"background_image\",\n            \"data\": \"base64编码的第一张背景图外链\",\n            \"encoding\": \"png\"\n        },\n        {\n            \"offset\": 9,\n            \"type\": \"background_image\",\n            \"data\": \"base64编码的第二张背景图外链\",\n            \"encoding\": \"png\"\n        }\n    ]\n}\n```\n\n| 参数 | 说明 |\n|------|------|\n| `offset` | 字偏移位置，播报到第几个字时切换背景 |\n| `type` | 固定为 `\"background_image\"` |\n| `data` | base64 编码的图片外链 URL |\n| `encoding` | 图片格式，如 `png` |\n\n《虚拟人接口》[doc_id:152]\n\n### 三、在音频驱动过程中动态切换\n\n通过 audio_driver 的 `ctrl_t` 字段，基于**时间偏移（毫秒）** 切换背景：\n\n```json\n{\n    \"ctrl_t\": [\n        {\n            \"offset_ms\": 0,\n            \"type\": \"background_image\",\n            \"data\": \"base64编码的图片外链\",\n            \"encoding\": \"png\"\n        },\n        {\n            \"offset_ms\": 5000,\n            \"type\": \"background_image\",\n            \"data\": \"base64编码的另一张图片外链\",\n            \"encoding\": \"png\"\n        }\n    ]\n}\n```\n\n《虚拟人接口》[doc_id:152]\n\n---\n\n### 总结\n\n| 配置时机 | 方式 | 偏移类型 |\n|---------|------|---------|\n| **start 启动时** | `payload.background_image`（外链）或 `payload.background_image_data`（二进制） | 无，直接设置初始背景 |\n| **文本驱动中** | `json_text` 的 `ctrl_res`，`type: \"background_image\"` | 字偏移（`offset`，第几个字） |\n| **音频驱动中** | `ctrl_t`，`type: \"background_image\"` | 时间偏移（`offset_ms`，毫秒） |\n\n三种方式都支持通过外链传入图片。start 阶段额外支持直接传入 base64 图片二进制数据。如果需要了解前景画中画或背景音频的配置方式，可以继续问我。",
+    "auto_evaluation": {
+      "score": 0.6666666666666666,
+      "matched_keywords": [
+        "background_image",
+        "payload"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 2/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 17,
+    "category": "使用方法",
+    "question": "虚拟人的保活接口怎么用？",
+    "answer": "让我检索虚拟人保活接口的详细信息。根据知识库文档，虚拟人的保活机制说明如下：\n\n---\n\n## 虚拟人保活接口（心跳）\n\n虚拟人会话建立后，需要通过定期发送**心跳请求**来保持会话存活，防止服务端因超时而关闭会话。\n\n### 请求协议\n\n```json\n{\n    \"header\": {\n        \"app_id\": \"\",\n        \"ctrl\": \"ping\"\n    }\n}\n```\n\n只需要 `header` 部分，`ctrl` 固定为 `\"ping\"`，不需要 `parameter` 和 `payload`。\n\n《虚拟人接口》[doc_id:152]\n\n### 发送频率\n\n推荐 **5~10 秒**发送一次心跳。\n\n《虚拟人接口》[doc_id:152]\n\n### 注意事项\n\n- 心跳需要在 **start 成功之后**开始发送，贯穿整个会话生命周期\n- 如果长时间不发送心跳也不发送驱动请求，服务端会认为会话空闲，主动断开连接\n- 心跳和驱动请求（text_driver / audio_driver / cmd）共用同一个 WebSocket 连接，正常发送驱动请求期间也建议保持心跳\n- 服务端收到 ping 后会返回对应的响应，可用于检测连接是否正常\n\n《虚拟人接口》[doc_id:152]\n\n### 在整体流程中的位置\n\n```\n1. 建立 WebSocket 连接\n2. 发送 start → 等待 stream_info / stream_start\n3. 开启心跳定时器（每 5~10 秒发送一次 ctrl=\"ping\"）\n4. 发送驱动请求（text_driver / audio_driver / cmd）\n5. 持续保持心跳...\n6. 结束时发送 stop 关闭会话\n7. 停止心跳定时器\n```\n\n实现上比较简单，就是一个定时器定期往 WebSocket 连接发送 `{\"header\": {\"app_id\": \"xxx\", \"ctrl\": \"ping\"}}` 即可。",
+    "auto_evaluation": {
+      "score": 0.6666666666666666,
+      "matched_keywords": [
+        "ping",
+        "保活"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 2/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 18,
+    "category": "使用方法",
+    "question": "如何停止虚拟人会话？",
+    "answer": "根据之前检索到的虚拟人接口文档内容，停止会话的方式如下：\n\n---\n\n## 停止虚拟人会话（stop 接口）\n\n### 请求协议\n\n```json\n{\n    \"header\": {\n        \"app_id\": \"\",\n        \"ctrl\": \"stop\"\n    }\n}\n```\n\n和心跳一样，只需要 `header` 部分，`ctrl` 固定为 `\"stop\"`，不需要 `parameter` 和 `payload`。\n\n《虚拟人接口》[doc_id:152]\n\n### 调用时机\n\n在会话结束、不再需要虚拟人播报时发送 stop 请求，服务端会：\n\n1. 停止虚拟人渲染和推流\n2. 释放会话占用的资源\n3. 关闭 WebSocket 连接\n\n### 在整体流程中的位置\n\n```\n1. 建立 WebSocket 连接\n2. 发送 start → 等待 stream_start\n3. 开启心跳（每 5~10 秒 ctrl=\"ping\"）\n4. 发送驱动请求（text_driver / audio_driver / cmd）\n5. ...播报完毕...\n6. 发送 stop（ctrl=\"stop\"）→ 会话结束，停止心跳\n7. 关闭 WebSocket 连接\n```\n\n### 注意事项\n\n- 发送 stop 后应**停止心跳定时器**，不再发送任何请求\n- 如果不主动发送 stop，而是直接断开 WebSocket 连接，服务端也会在超时后自动清理资源，但建议**主动发送 stop** 以便及时释放资源\n- 如果需要重新开始，需要**重新建立 WebSocket 连接**并再次发送 start",
+    "auto_evaluation": {
+      "score": 1.0,
+      "matched_keywords": [
+        "stop",
+        "ctrl"
+      ],
+      "total_keywords": 2,
+      "reason": "匹配 2/2 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 19,
+    "category": "使用方法",
+    "question": "reset 接口的作用是什么？",
+    "answer": "让我检索虚拟人 reset 接口的相关信息。根据知识库文档，虚拟人实际上提供了**两套 reset 接口**，分别对应新旧两种协议：\n\n---\n\n## reset 接口的作用\n\n**reset 接口用于中止当前正在进行中的所有驱动任务，让虚拟人回到静默状态。**\n\n也就是说，如果虚拟人正在播报文本或音频驱动中，调用 reset 后会立即停止播报和动作，恢复为静默推流状态——但**不会关闭会话**，可以继续发送新的驱动请求。\n\n《虚拟人接口》[doc_id:152]\n\n### 与 stop 的区别\n\n| 接口 | 作用 |\n|------|------|\n| `reset` | 中止当前播报，回到静默状态，**会话保持**，可继续驱动 |\n| `stop` | 结束整个会话，停止推流，释放资源 |\n\n### 新协议（WebSocket）调用方式\n\n```json\n{\n    \"header\": {\n        \"app_id\": \"\",\n        \"ctrl\": \"reset\"\n    }\n}\n```\n\n通过已建立的 WebSocket 连接发送，`ctrl` 固定为 `\"reset\"`。\n\n《虚拟人接口》[doc_id:152]\n\n### 旧协议（HTTP）调用方式\n\n```\nPOST http(s)://vms.cn-huabei-1.xf-yun.com/v1/private/vms2d_reset\n```\n\n```json\n{\n    \"header\": {\n        \"app_id\": \"\",\n        \"uid\": \"\",\n        \"session\": \"\"\n    }\n}\n```\n\n旧协议需要通过 `session` 字段关联到对应的会话。\n\n《虚拟人接口》[doc_id:152]\n\n### 响应\n\n```json\n{\n    \"request_id\": \"\",\n    \"period\": \"driver\",\n    \"event_type\": \"reset\",\n    \"error_code\": 0,\n    \"error_message\": \"\"\n}\n```\n\n《虚拟人接口》[doc_id:152]\n\n### 典型使用场景\n\n- **智能客服场景**：用户在虚拟人播报回答过程中提出了新问题，先调用 reset 停止当前播报，再用 text_driver 打断模式发送新内容\n- **直播场景**：需要临时中断当前播报内容，切换到其他话题\n- **异常恢复**：驱动过程中出现问题，通过 reset 让虚拟人回到可控的静默状态，再重新发起驱动\n\n简单来说，reset 就是\"停止当前播报但不关闭会话\"的操作，相当于给虚拟人按了一个\"暂停并复位\"的按钮。",
+    "auto_evaluation": {
+      "score": 1.0,
+      "matched_keywords": [
+        "reset",
+        "中止",
+        "静默"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 3/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 20,
+    "category": "使用方法",
+    "question": "如何配置虚拟人的视频分辨率？",
+    "answer": "根据之前检索到的虚拟人接口文档内容，视频分辨率的配置方式如下：\n\n---\n\n## 配置虚拟人视频分辨率\n\n视频分辨率在 `start` 接口中通过 `parameter.avatar` 下的 `width` 和 `height` 字段设置：\n\n```json\n{\n    \"header\": {\n        \"app_id\": \"\",\n        \"ctrl\": \"start\"\n    },\n    \"parameter\": {\n        \"avatar\": {\n            \"avatar_id\": \"118801001\",\n            \"width\": 1280,\n            \"height\": 720,\n            \"stream\": {\n                \"protocol\": \"xrtc\"\n            }\n        }\n    }\n}\n```\n\n### 参数说明\n\n| 参数 | 说明 |\n|------|------|\n| `width` | 视频宽度（像素） |\n| `height` | 视频高度（像素） |\n\n《虚拟人接口》[doc_id:152]\n\n### 相关的画面调整参数\n\n除了分辨率，`parameter.avatar` 下还有几个配合使用的画面参数：\n\n| 参数 | 说明 | 示例值 |\n|------|------|--------|\n| `scale` | 虚拟人缩放比，值需大于 0.01 | `0.99` |\n| `move_h` | 纵向位移 | `12` |\n| `move_v` | 横向位移 | `0` |\n| `mask_region` | 画面裁剪区域 | `\"[0,51,1080,1347]\"` |\n\n《虚拟人接口》[doc_id:152]\n\n### 与推流相关的视频参数\n\n在 `parameter.avatar.stream` 中还可以配置影响视频质量的参数：\n\n| 参数 | 说明 | 默认值 |\n|------|------|--------|\n| `fps` | 视频帧率 | 25 |\n| `bitrate` | 视频码率 | 2000 |\n| `alpha` | 是否开启透明通道（0 关闭 / 1 开启） | 0 |\n| `profile` | 编码档次 | `\"main\"` |\n\n《虚拟人接口》[doc_id:152]\n\n### 注意事项\n\n- 分辨率在 **start 阶段设定**，会话过程中无法动态修改\n- 分辨率、码率、帧率三者共同影响视频画面质量和带宽消耗，需要根据实际场景做平衡\n- 背景图片的尺寸建议与设定的分辨率匹配，避免拉伸或留白",
+    "auto_evaluation": {
+      "score": 1.0,
+      "matched_keywords": [
+        "width",
+        "height",
+        "分辨率"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 3/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 21,
+    "category": "问题排障",
+    "question": "错误码 10301 是什么意思？",
+    "answer": "让我检索虚拟人接口中错误码 10301 的说明。让我再用关键词精确搜索一下。让我读取虚拟人接口文档中关于错误码的章节。根据知识库文档，错误码 10301 的含义如下：\n\n---\n\n## 错误码 10301\n\n属于**云服务端返回的错误码**。\n\n接口调用报 `\"code\":10301` 时，通常是以下两种原因：\n\n1. **用户没有正常发送结束帧 `status=2`，导致链路超时报错** —— 比如音频驱动场景下，客户端发送了首帧和中间帧，但没有发送尾帧（`status=2`）来告知服务端数据已发送完毕，服务端一直等待直到超时\n2. **网络问题导致超时报错** —— 客户端与服务端之间的网络不稳定，数据传输中断或延迟过大\n\n《合成.md》[doc_id:124]\n\n### 排查建议\n\n- 首先检查代码中数据发送逻辑，确认是否正确发送了 `status=2` 的结束帧\n- 如果结束帧发送正常，检查网络连通性和稳定性\n- 如果问题持续出现，可参考工单系统提交问题类型单，或联系技术支持 yfzhang79 协助排查",
+    "auto_evaluation": {
+      "score": 1.0,
+      "matched_keywords": [
+        "10301",
+        "链路超时",
+        "结束帧"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 3/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 22,
+    "category": "问题排障",
+    "question": "错误码 11200 怎么处理？",
+    "answer": "让我检索错误码 11200 的说明。让我再精确搜索一下 11200。让我在 FAQ 文档中查找一下。根据知识库的检索结果，**没有找到错误码 11200 的明确说明**。\n\n---\n\n知识库中收录的错误码主要包括：\n\n- **10313**：会话实例繁忙（当前正在驱动中，请等待上一次驱动结束或调用 reset 后再发起新驱动）\n- **10301**：链路超时（未发送结束帧 status=2 或网络超时）\n- **10013 / 10014**：内容审核相关（星火大模型输入/输出涉及敏感信息）\n\n但 11200 不在已收录的文档范围内。\n\n### 建议\n\n1. 检查接口返回的完整错误信息（`error_message` 字段），通常会有具体描述\n2. 确认是哪个接口返回的 11200（start / text_driver / audio_driver），不同接口的错误码含义可能不同\n3. 如果是虚拟人相关接口，可联系技术支持 yfzhang79 协助排查\n4. 也可以在工单系统中提交问题类型单，附上完整的请求和响应日志\n\n如果你能提供返回 11200 时的完整错误信息或调用场景，我可以帮你进一步分析。",
+    "auto_evaluation": {
+      "score": 0.3333333333333333,
+      "matched_keywords": [
+        "11200"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 1/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 23,
+    "category": "问题排障",
+    "question": "错误码 10106 是什么原因？",
+    "answer": "让我检索错误码 10106 的说明。让我再精确搜索一下。根据知识库文档，错误码 10106 的含义如下：\n\n---\n\n## 错误码 10106\n\n**原因：没有该接口的使用权限。**\n\n也就是说，当前使用的 `app_id` 对应的应用没有开通所调用接口的权限。\n\n《合成.md》[doc_id:124]\n\n### 处理方式\n\n1. 登录 AI 云平台控制台，检查当前应用是否已开通对应服务（如虚拟人、语音合成等）\n2. 如果未开通，在控制台中找到对应产品并申请开通\n3. 如果已开通但仍然报错，确认请求中的 `app_id` 是否与开通服务的应用一致\n4. 权限开通后可能需要等待几分钟生效",
+    "auto_evaluation": {
+      "score": 0.3333333333333333,
+      "matched_keywords": [
+        "10106"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 1/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 24,
+    "category": "问题排障",
+    "question": "调用虚拟人接口返回 10404 怎么办？",
+    "answer": "让我检索错误码 10404 的说明。让我再精确搜索一下。根据知识库的检索结果，**没有找到错误码 10404 的明确说明**。\n\n---\n\n知识库中已收录的虚拟人相关错误码包括：\n\n| 错误码 | 含义 |\n|--------|------|\n| 10106 | 没有该接口的使用权限 |\n| 10301 | 链路超时（未发送结束帧或网络超时） |\n| 10313 | 会话实例繁忙 |\n\n10404 不在已收录的文档范围内。不过从错误码命名规律推测，10404 可能与**资源未找到**相关（类似 HTTP 404），比如：\n\n- `avatar_id` 填写的形象 ID 不存在或未授权\n- 请求的服务地址路径不正确\n- 会话已过期或不存在（如对一个已 stop 的会话发送驱动请求）\n\n### 建议排查步骤\n\n1. 检查接口返回的 `error_message` 字段，通常会有具体描述\n2. 确认 `avatar_id` 是否正确且已在控制台开通\n3. 确认请求地址是否正确（上海 / 北京节点）\n4. 如果是驱动请求报错，确认会话是否仍然存活（是否已 stop 或超时断开）\n5. 如仍无法解决，联系技术支持 yfzhang79 或提交工单，附上完整请求和响应日志",
+    "auto_evaluation": {
+      "score": 0.25,
+      "matched_keywords": [
+        "10404"
+      ],
+      "total_keywords": 4,
+      "reason": "匹配 1/4 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 25,
+    "category": "问题排障",
+    "question": "错误码 10110 如何解决？",
+    "answer": "让我检索错误码 10110 的说明。根据知识库文档，错误码 10110 的含义如下：\n\n---\n\n## 错误码 10110\n\n**原因：找不到该应用的相关信息，即 `app_id` 错误。**\n\n《合成.md》[doc_id:124]\n\n### 处理方式\n\n1. 检查请求中的 `app_id` 是否填写正确，确认与控制台中创建的应用 ID 一致\n2. 注意不要多加空格、少字符或复制错误\n3. 登录 AI 云平台控制台，确认该应用确实存在且状态正常\n4. 如果是新创建的应用，可能需要等待几分钟后再试",
+    "auto_evaluation": {
+      "score": 0.3333333333333333,
+      "matched_keywords": [
+        "10110"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 1/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 26,
+    "category": "问题排障",
+    "question": "虚拟人 WebSocket 连接断开怎么办？",
+    "answer": "让我检索虚拟人断连重连的相关信息。根据知识库文档，虚拟人支持**断连重连机制**，具体说明如下：\n\n---\n\n## WebSocket 断连重连\n\n虚拟人会话在 WebSocket 连接异常断开后，支持通过**重连机制恢复原会话**，不需要重新启动虚拟形象。\n\n### 重连请求协议\n\n```json\n{\n    \"header\": {\n        \"app_id\": \"\",\n        \"ctrl\": \"reconnect\",\n        \"session_id\": \"原会话的session_id\"\n    }\n}\n```\n\n| 参数 | 说明 |\n|------|------|\n| `ctrl` | 固定为 `\"reconnect\"` |\n| `session_id` | 原会话的 session_id，需要在首次 start 成功后保存下来 |\n\n《虚拟人接口》[doc_id:152]\n\n### 重连流程\n\n```\n1. WebSocket 连接异常断开\n2. 客户端检测到断开，重新建立 WebSocket 连接（连接同一地址）\n3. 发送 reconnect 请求，携带原会话的 session_id\n4. 服务端恢复原会话，返回重连成功\n5. 继续发送驱动请求（text_driver / audio_driver / cmd）\n6. 恢复心跳定时器\n```\n\n### 注意事项\n\n- **session_id 需要提前保存**：在首次 start 成功的响应中会返回 session_id，客户端需要保存下来用于断连重连\n- **重连有时间窗口**：断连后服务端不会立即释放会话资源，但超过一定时间未重连，会话仍会被回收，此时需要重新 start\n- **重连后推流继续**：重连成功后，原来的推流地址和拉流端不受影响，虚拟人画面可以无缝恢复\n- **XRTC 和 RTMP 均支持**：两种推流协议下都支持断连重连\n\n《虚拟人接口》[doc_id:152]\n\n### 预防断连的措施\n\n1. **保持心跳**：每 5~10 秒发送 `ctrl=\"ping\"`，防止服务端因空闲超时断开\n2. **网络监控**：客户端监听 WebSocket 的 `onclose` / `onerror` 事件，检测到断开后立即触发重连逻辑\n3. **重试机制**：重连失败时可以间隔几秒重试，多次重试仍失败则重新 start 创建新会话\n\n### 重连失败的处理\n\n如果重连失败（会话已过期或被回收），需要走完整的启动流程：\n\n```\n重新建立 WebSocket 连接 → 发送 start → 等待 stream_info / stream_start → 恢复驱动和心跳\n```\n\n拉流端需要使用新的推流地址重新拉流。",
+    "auto_evaluation": {
+      "score": 0.6666666666666666,
+      "matched_keywords": [
+        "重连",
+        "ping"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 2/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 27,
+    "category": "问题排障",
+    "question": "audio_driver 的 status 参数应该怎么传？",
+    "answer": "根据之前检索到的虚拟人接口文档内容，audio_driver 的 `status` 参数用法如下：\n\n---\n\n## audio_driver 的 status 参数\n\n`status` 用于标识当前发送的音频帧在整段音频中的位置，取值有三种：\n\n| status 值 | 含义 | 说明 |\n|-----------|------|------|\n| `0` | 首帧 | 一段音频的第一帧，标识音频驱动开始 |\n| `1` | 中间帧 | 持续发送音频数据，可发送多次 |\n| `2` | 尾帧 | 一段音频的最后一帧，标识音频驱动结束 |\n\n《虚拟人接口》[doc_id:152]\n\n### 发送流程\n\n```\n第1次发送：status=0，携带第一段音频数据（首帧）\n第2次发送：status=1，携带后续音频数据（中间帧）\n第3次发送：status=1，携带后续音频数据（中间帧）\n...可发送多次中间帧...\n最后一次：status=2，携带最后一段音频数据（尾帧）\n```\n\n### 请求示例\n\n**首帧：**\n```json\n{\n    \"header\": { \"app_id\": \"\", \"ctrl\": \"audio_driver\" },\n    \"parameter\": { \"transition_mode\": \"general\" },\n    \"payload\": {\n        \"audio\": {\n            \"encoding\": \"raw\",\n            \"sample_rate\": 16000,\n            \"status\": 0,\n            \"audio\": \"base64编码的第一段音频数据\"\n        }\n    }\n}\n```\n\n**中间帧：**\n```json\n{\n    \"header\": { \"app_id\": \"\", \"ctrl\": \"audio_driver\" },\n    \"payload\": {\n        \"audio\": {\n            \"encoding\": \"raw\",\n            \"sample_rate\": 16000,\n            \"status\": 1,\n            \"audio\": \"base64编码的中间段音频数据\"\n        }\n    }\n}\n```\n\n**尾帧：**\n```json\n{\n    \"header\": { \"app_id\": \"\", \"ctrl\": \"audio_driver\" },\n    \"payload\": {\n        \"audio\": {\n            \"encoding\": \"raw\",\n            \"sample_rate\": 16000,\n            \"status\": 2,\n            \"audio\": \"base64编码的最后一段音频数据\"\n        }\n    }\n}\n```\n\n《虚拟人接口》[doc_id:152]\n\n### 注意事项\n\n- 状态流转必须是 **0 → 1(多次) → 2**，不能跳过或乱序\n- 如果音频数据很短，可以只发送 **0 → 2**（首帧直接作为尾帧），跳过中间帧\n- **必须发送尾帧（status=2）**，否则服务端会一直等待数据，最终超时报错 10301\n- 音频格式固定为 `raw` 编码、16000 采样率、单声道、16bit PCM",
+    "auto_evaluation": {
+      "score": 0.8,
+      "matched_keywords": [
+        "status",
+        "0",
+        "1",
+        "2"
+      ],
+      "total_keywords": 5,
+      "reason": "匹配 4/5 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 28,
+    "category": "问题排障",
+    "question": "虚拟人推流失败可能是什么原因？",
+    "answer": "让我检索虚拟人推流失败的相关信息。让我再搜索一下推流相关的问题排查。根据知识库文档中的接口说明和错误码信息，推流失败可能有以下几类原因：\n\n---\n\n## 虚拟人推流失败的可能原因\n\n### 一、start 阶段就失败\n\n**1. 权限问题**\n- 错误码 10106：没有该接口的使用权限，需要在控制台开通虚拟人服务\n- 错误码 10110：app_id 错误，找不到该应用\n\n**2. 参数配置问题**\n- `avatar_id` 填写错误或未授权\n- `protocol` 值不合法（应为 `rtmp` / `xrtc` / `local`）\n- `width`、`height` 等必填参数缺失\n\n**3. 资源问题**\n- 错误码 10313：会话实例繁忙，并发资源已满，需要等待或释放现有会话\n\n《虚拟人接口》[doc_id:152]《合成.md》[doc_id:124]\n\n### 二、start 成功但拉流端无画面\n\n**1. 拉流地址未正确获取**\n- start 成功后需要等待 `stream_info` 事件返回拉流地址，确认是否正确接收\n- xrtc 协议还需要 `stream_extend` 中的 `appid` 和 `userSig`，缺失会导致拉流鉴权失败\n\n**2. 推流尚未开始**\n- 需要等到 `stream_start` 事件之后再开始拉流，提前拉流可能无画面\n\n**3. 协议不匹配**\n- 拉流客户端的协议要与 start 时指定的 `protocol` 一致（xrtc 用 xrtc 客户端拉流，rtmp 用 RTMP 播放器）\n\n**4. 网络问题**\n- 客户端与推流服务器之间网络不通或延迟过大\n- 确认请求的节点地址正确（上海 / 北京）\n\n《虚拟人接口》[doc_id:152]\n\n### 三、推流中途断开\n\n**1. 心跳缺失**\n- 未保持心跳（每 5~10 秒发送 `ctrl=\"ping\"`），服务端因空闲超时断开会话\n\n**2. WebSocket 连接断开**\n- 网络不稳定导致 WebSocket 断开，推流随之中断\n- 处理方式：通过 `ctrl=\"reconnect\"` 携带原 `session_id` 重连恢复会话\n\n**3. 链路超时**\n- 错误码 10301：音频驱动时未发送尾帧（`status=2`），服务端等待超时\n\n《虚拟人接口》[doc_id:152]\n\n### 四、local 模式无视频文件\n\n- `protocol` 设为 `local` 时不走实时推流，而是生成视频文件\n- 需要通过对应的回调或下载接口获取生成的视频文件，而非拉流\n\n《虚拟人接口》[doc_id:152]\n\n---\n\n### 排查步骤建议\n\n```\n1. 检查 start 响应是否成功（error_code=0）\n2. 确认收到 stream_info 事件，拿到正确的拉流地址\n3. 确认收到 stream_start 事件后再开始拉流\n4. 确认拉流协议与 protocol 参数匹配\n5. 确认心跳正常发送\n6. 检查网络连通性\n7. 查看完整的错误码和 error_message\n```\n\n如果以上都排查正常仍然失败，建议联系技术支持 yfzhang79 或提交工单，附上完整的请求日志和错误响应。",
+    "auto_evaluation": {
+      "score": 0.75,
+      "matched_keywords": [
+        "推流",
+        "配置",
+        "protocol"
+      ],
+      "total_keywords": 4,
+      "reason": "匹配 3/4 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 29,
+    "category": "问题排障",
+    "question": "错误码 11204 代表什么？",
+    "answer": "让我检索错误码 11204 的说明。让我再精确搜索一下。根据知识库的检索结果，**没有找到错误码 11204 的说明**。\n\n---\n\n知识库中已收录的错误码包括：\n\n| 错误码 | 含义 |\n|--------|------|\n| 10106 | 没有该接口的使用权限 |\n| 10110 | app_id 错误，找不到该应用 |\n| 10301 | 链路超时（未发送结束帧或网络超时） |\n| 10313 | 会话实例繁忙 |\n| 10013/10014 | 内容审核相关（星火大模型） |\n\n11204 不在已收录范围内。\n\n### 建议\n\n1. 查看接口返回的 `error_message` 字段，通常会包含具体的错误描述\n2. 确认是哪个接口返回的该错误码（start / text_driver / audio_driver 等）\n3. 联系技术支持 yfzhang79 或提交工单，附上完整的请求参数和响应内容以便定位",
+    "auto_evaluation": {
+      "score": 0.3333333333333333,
+      "matched_keywords": [
+        "11204"
+      ],
+      "total_keywords": 3,
+      "reason": "匹配 1/3 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  },
+  {
+    "id": 30,
+    "category": "问题排障",
+    "question": "如何排查虚拟人动作不流畅的问题？",
+    "answer": "让我检索虚拟人动作不流畅相关的排查信息。让我再搜索一下相关的配置参数。根据知识库文档中虚拟人接口的参数说明，动作不流畅可以从以下几个方面排查：\n\n---\n\n## 排查虚拟人动作不流畅\n\n### 一、视频参数配置\n\n在 start 接口的 `parameter.avatar.stream` 中，以下参数直接影响画面流畅度：\n\n| 参数 | 建议值 | 说明 |\n|------|--------|------|\n| `fps` | 25 | 帧率，值越低画面越卡顿，推荐使用默认值 25 |\n| `bitrate` | 2000 | 码率，过低会导致画质下降、动作模糊 |\n| `gopsize` | 1 | 关键帧间隔，影响画面刷新频率 |\n\n检查这些参数是否被设置了过低的值。\n\n《虚拟人接口》[doc_id:152]\n\n### 二、网络带宽问题\n\n推流是实时视频传输，对网络有一定要求：\n\n- **客户端带宽不足**：拉流端下行带宽不够会导致丢帧、卡顿\n- **服务端到客户端延迟高**：选择就近的节点地址（上海 `cn-huadong-1` 或北京 `cn-huabei-1`）\n- **网络抖动**：不稳定的网络会导致画面时快时慢\n\n### 三、推流协议选择\n\n| 协议 | 特点 |\n|------|------|\n| `xrtc` | 实时性好，延迟低，适合交互场景 |\n| `rtmp` | 传统直播协议，可能有 1~3 秒延迟 |\n\n如果使用 rtmp 出现不流畅，可以尝试切换到 xrtc 协议看是否改善。\n\n《虚拟人接口》[doc_id:152]\n\n### 四、动作配置问题\n\n**1. AIR 动作意图引擎配置**\n\n如果开启了 AIR 引擎，检查以下参数：\n\n| 参数 | 说明 |\n|------|------|\n| `add_nonsemantic` | 建议设为 1，在语义动作间隔过长时自动填充无指向动作，避免虚拟人长时间静止 |\n| `action_list` | 如果限定了动作范围过小，引擎可选动作有限，可能导致动作单一或衔接不自然 |\n\n```json\n\"air\": {\n    \"air\": 1,\n    \"add_nonsemantic\": 1,\n    \"action_list\": \"\"\n}\n```\n\n`action_list` 留空不限制，让引擎有更多动作可选。\n\n**2. 手动动作标签过多或过密**\n\n在文本中插入的 `[[action=xxx]]` 如果间隔太近，动作之间来不及过渡，可能导致不自然。适当拉开动作标签的间距。\n\n《虚拟人接口》[doc_id:152]\n\n### 五、音频驱动场景特有问题\n\n**1. 音频帧发送不均匀**\n\naudio_driver 按帧发送音频数据，如果发送间隔不均匀（时快时慢），会导致口型和动作不同步。建议按照固定间隔匀速发送。\n\n**2. 音频格式不符**\n\n音频必须是 `raw` 编码、16000 采样率、单声道、16bit。格式不对会导致口型解析异常，动作表现不自然。\n\n《虚拟人接口》[doc_id:152]\n\n### 六、分辨率过高\n\n`width` 和 `height` 设置过高（如 1920×1080）会增加渲染压力，在码率和帧率不变的情况下画面质量可能下降。可以尝试降低分辨率（如 1280×720）看是否改善。\n\n《虚拟人接口》[doc_id:152]\n\n---\n\n### 排查步骤建议\n\n```\n1. 确认 fps=25、bitrate≥2000，参数没有设过低\n2. 检查网络带宽和延迟，选择就近节点\n3. 开启 AIR 的 add_nonsemantic=1，避免动作空白\n4. 音频驱动场景确认音频格式正确、发送间隔均匀\n5. 适当降低分辨率测试\n6. 尝试切换推流协议（rtmp ↔ xrtc）\n```\n\n如果以上调整后仍然不流畅，建议联系技术支持 yfzhang79，提供具体的参数配置和表现描述以便进一步定位。",
+    "auto_evaluation": {
+      "score": 1.0,
+      "matched_keywords": [
+        "动作",
+        "引擎",
+        "网络",
+        "配置"
+      ],
+      "total_keywords": 4,
+      "reason": "匹配 4/4 个关键词"
+    },
+    "manual_rating": null,
+    "manual_comment": ""
+  }
+]

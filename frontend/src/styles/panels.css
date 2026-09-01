@@ -1,0 +1,86 @@
+/* 左侧面板统一样式变量 - 供 FileUpload, SkillsPanel, WorkspaceTree 使用 */
+
+/* 面板头部 */
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* 面板内容区 */
+.panel-content {
+  padding: 8px 10px;
+}
+
+/* 列表项通用 */
+.panel-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1px;
+  font-size: 12px;
+}
+
+.panel-item:hover {
+  background: var(--sidebar-hover);
+}
+
+/* 空状态 */
+.panel-empty {
+  color: var(--text-dim);
+  font-size: 11px;
+  padding: 8px;
+  text-align: center;
+}
+
+/* 按钮统一 */
+.panel-btn {
+  padding: 5px 12px;
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: opacity 0.15s;
+}
+
+.panel-btn:hover {
+  opacity: 0.9;
+}
+
+.panel-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 删除按钮 */
+.panel-delete {
+  border: none;
+  background: transparent;
+  color: #c4c8d0;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 3px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.panel-item:hover .panel-delete {
+  opacity: 1;
+}
+
+.panel-delete:hover {
+  color: #e64545;
+}
